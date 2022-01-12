@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "28cd7dba-18d0-4a70-89b4-73100f06a6f9": {
+      "ProjectGuid": "28cd7dba-18d0-4a70-89b4-73100f06a6f9",
+      "DisplayName": "FactorioCalculator",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}

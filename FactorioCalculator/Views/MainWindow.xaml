@@ -1,0 +1,45 @@
+﻿<Window x:Class="FactorioCalculator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+		  xmlns:vm="clr-namespace:FactorioCalculator.ViewModels"
+        xmlns:local="clr-namespace:FactorioCalculator"
+        mc:Ignorable="d"
+        Title="MainWindow" 
+		  WindowState="Maximized"
+		  Height="1080" 
+		  Width="1920">
+	<Window.DataContext>
+		<vm:MainViewModel/>
+	</Window.DataContext>
+    <Grid >
+		<Grid.RowDefinitions>
+			<RowDefinition Height="75"/>
+			<RowDefinition Height="*"/>
+		</Grid.RowDefinitions>
+		<DockPanel x:Name="FactoryList" Grid.Row="0" Background="Red">
+			<ItemsControl ItemsSource="{Binding Factories}">
+				<ItemsControl.ItemsPanel>
+					<ItemsPanelTemplate>
+						<StackPanel Orientation="Horizontal"/>
+					</ItemsPanelTemplate>
+				</ItemsControl.ItemsPanel>
+				<ItemsControl.ItemTemplate>
+					<DataTemplate>
+						<Button Margin="8" Width="59" Content="{Binding }"/>
+					</DataTemplate>
+				</ItemsControl.ItemTemplate>
+			</ItemsControl>
+		</DockPanel>
+		<DockPanel x:Name="FactoryOverview" Grid.Row="1" Background="Black">
+			<TabControl TabStripPlacement="Left">
+				<TabControl.ItemTemplate>
+					<DataTemplate>
+						<TextBlock Text="HelloWorld"/>
+					</DataTemplate>
+				</TabControl.ItemTemplate>
+			</TabControl>
+		</DockPanel>
+	</Grid>
+</Window>
